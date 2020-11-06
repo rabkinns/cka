@@ -23,7 +23,7 @@ echo this script is based on the NIC name ens33
 echo if your networkcard has a different name, edit keepalived.conf
 echo before continuing and change "interface ens33" to match your config
 echo .
-echo this script will create a keepalived apiserver at 192.168.4.100
+echo this script will create a keepalived apiserver at 10.10.15.145
 echo if this IP address does not match your network configuration,
 echo manually change the check_apiserver.sh file before continuing
 echo press enter to continue or Ctrl-c to interrupt and apply modifications
@@ -50,9 +50,9 @@ ssh-copy-id control2
 ssh-copy-id control3
 
 # install required software
-yum install haproxy keepalived -y
-ssh control2 "yum install haproxy keepalived -y"
-ssh control3 "yum install haproxy keepalived -y"
+apt install haproxy keepalived -y
+ssh control2 "apt install haproxy keepalived -y"
+ssh control3 "apt install haproxy keepalived -y"
 
 # copying /etc/hosts file
 scp /etc/hosts control2:/etc/
@@ -97,4 +97,4 @@ ssh control3 systemctl enable keepalived --now
 ssh control3 systemctl enable haproxy --now
 
 echo setup is now done, please verify
-echo control1 should run the virtual IP address 192.168.4.100
+echo control1 should run the virtual IP address 10.10.15.145
