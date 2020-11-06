@@ -41,11 +41,11 @@ EOF
 # UPDATE NODES FOR YOUR ENV AND UNCOMMENT
 cat >> /etc/hosts << EOF
 {
-  10.10.15.140 reidk8s01 control1
-  10.10.15.141 reidk8s02 control2
-  10.10.15.142 reidk8s03 control3
-  10.10.15.143 reidk8s04 worker1
-  10.10.15.144 reidk8s05 worker2
+  10.10.15.140 reidk8s01.example.com control1
+  10.10.15.141 reidk8s02.example.com control2
+  10.10.15.142 reidk8s03.example.com control3
+  10.10.15.143 reidk8s04.example.com worker1
+  10.10.15.144 reidk8s05.example.com worker2
 }
 EOF
 
