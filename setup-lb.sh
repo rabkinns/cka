@@ -19,9 +19,9 @@ echo enter the IP address for control3
 read CONTROL3_IP
 echo ##### READ ALL OF THIS BEFORE CONTINUING ######
 echo this script requires you to run setup-docker.sh and setup-kubetools.sh first
-echo this script is based on the NIC name ens33
+echo this script is based on the NIC name ens192
 echo if your networkcard has a different name, edit keepalived.conf
-echo before continuing and change "interface ens33" to match your config
+echo before continuing and change "interface ens192" to match your config
 echo .
 echo this script will create a keepalived apiserver at 10.10.15.145
 echo if this IP address does not match your network configuration,

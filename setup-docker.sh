@@ -22,6 +22,7 @@ sudo add-apt-repository \
 
 apt update -y
 apt install -y docker-ce docker-ce-cli containerd.io
+
 [ ! -d /etc/docker ] && mkdir /etc/docker
 
 cat > /etc/docker/daemon.json <<EOF
@@ -35,17 +36,6 @@ cat > /etc/docker/daemon.json <<EOF
   "storage-opts": [
     "overlay2.override_kernel_check=true"
   ]
-}
-EOF
-
-# UPDATE NODES FOR YOUR ENV AND UNCOMMENT
-cat >> /etc/hosts << EOF
-{
-  10.10.15.140 reidk8s01.example.com control1
-  10.10.15.141 reidk8s02.example.com control2
-  10.10.15.142 reidk8s03.example.com control3
-  10.10.15.143 reidk8s04.example.com worker1
-  10.10.15.144 reidk8s05.example.com worker2
 }
 EOF
 
